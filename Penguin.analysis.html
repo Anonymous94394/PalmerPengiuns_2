@@ -1833,7 +1833,8 @@ library(broom)
 library(ggpubr)
 library(rstatix)
 library(knitr)
-library(kableExtra)</code></pre>
+library(kableExtra)
+library(renv)</code></pre>
 </div>
 <div id="load-the-data" class="section level3">
 <h3>Load the data</h3>
@@ -2398,6 +2399,9 @@ Science Helps Researchers Succeed.”</span> <em>eLife</em> 5: e16800. <a href="
 </div>
 </div>
 <hr />
+<pre class="r"><code>renv::init()
+renv::snapshot()</code></pre>
+<pre><code>## - The lockfile is already up to date.</code></pre>
 </div>
 <div id="section-3-open-science" class="section level1">
 <h1><strong>Section 3:</strong> Open Science</h1>

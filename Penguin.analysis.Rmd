@@ -30,13 +30,19 @@ library(ggpubr)
 library(rstatix)
 library(knitr)
 library(kableExtra)
+library(renv)
 ```
+
 
 ### Load the data
 
 ```{r, include=TRUE}
+
 penguins_raw <- read.csv(here("data", "penguins_raw.csv"))
+
+
 ```
+
 
 # **Section 1:** Data Visualization for Science Communication
 
@@ -128,7 +134,7 @@ source(here("Functions", "SavingFigure.R")) # Details in the function file
 
 # Apply the function
 save_flipper_plot_svg(Flipper.Histogram,
-                      here("Figures", "Flipper.Histogram.svg"), size = 25, scaling = 1.5)
+                      here("Figures", "Flipper.Histogram.svg"), size = 25, scaling = 1.25)
 ```
 
 ### Summary statistics
@@ -309,7 +315,7 @@ print(Results.figure)
 
 #The save function has already been called so just need to apply the function 
 save_flipper_plot_svg(Results.figure,
-                      here("Figures", "Results.figure.svg"), size =25, scaling = 1.5)
+                      here("Figures", "Results.figure.svg"), size =25, scaling = 1.25)
 ```
 
 # [Conclusion]{.underline}
@@ -322,15 +328,18 @@ save_flipper_plot_svg(Results.figure,
 :::
 
 ------------------------------------------------------------------------
+
+```{r, message=FALSE, warning=FALSE}
+renv::init()
+renv::snapshot()
+```
+
+
 # **Section 3:** Open Science
 
 ### a) GitHub
 
-*Upload your RProject you created for **Question 2** and any files and subfolders used to GitHub. Do not include any identifiers such as your name. Make sure your GitHub repo is public.*
-
-*GitHub link:*
-
-*You will be marked on your repo organisation and readability.*
+*GitHub link:* https://github.com/Anonymous94394/PalmerPengiuns_2.git
 
 ### b) Share your repo with a partner, download, and try to run their data pipeline.
 
