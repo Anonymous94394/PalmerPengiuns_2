@@ -7,17 +7,16 @@ Cleaning <- function(raw_data){
     select(-starts_with("delta"))
 }
 
-# A function to make sure the column names are cleaned up, 
-# eg lower case and snake case
+# A function to clean the collumn names 
 clean_column_names <- function(penguins_data) {
   penguins_data %>%
     clean_names()
 }
 
-# A function to remove columns based on a vector of column names
+# A function to remove columns based on specified column names. 
 remove_columns <- function(penguins_data, column_names) {
   penguins_data %>%
-    select(-starts_with(column_names))
+    select(-starts_with(column_names)) #Select column name that start with the text specified in the brackets. 
 }
 
 # A function to make sure the species names are shortened
